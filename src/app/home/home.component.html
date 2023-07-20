@@ -1,5 +1,10 @@
 <div class="test">
-    <h1>Day la Component Home</h1>
-    <p>Them hang</p>
+    <h1>Đây là Component Home</h1>
+    
+    
+    <h2>Chào bạn {{ name }}</h2>
+    <input value="{{ name }}" title="Đây là {{ name }} " />
+    <br/>
+    <input [value]="name" [title]="'Đây là '+ name "/>
 </div>
 
