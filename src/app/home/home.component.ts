@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +6,16 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public name = 'Trang Bảo Duy';  
+  public name = 'Trang Bảo Duy';
   public age = 15;
-  constructor(){}
+  public traicay = ['Táo','Nho','Cam','Quýt','Ổi'];
+  constructor() { }
 
-    ngOnInit(): void {}
-   
+  public ngOnInit(): void {
+    console.log('trai cay = ',this.traicay);
+   }
+  public resetName(): void {
+    console.log('reset name');
+    this.name = '';
+  }
 }
