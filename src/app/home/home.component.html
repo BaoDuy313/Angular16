@@ -1,7 +1,21 @@
 <div class="test">
     <h1>Đây là Component Home</h1>
     <h1>Trái Cây</h1>
-    <div *ngFor="let item of traicay; let i = index">
-        <li>{{i+1}}.{{ item }}</li>
-    </div>
+    <br/>
+    <table class="table">
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Đại Hạ Giá</th>
+        </tr>
+        <tr *ngFor="let item of traicay2; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{item.ten}}</td>
+            <td class="right">
+                <span [ngClass]="{'so-am': item.gia < 0}" >{{item.gia}}</span>
+            </td>
+            <td *ngIf="item.haGia">Đang hạ giá !!!</td>
+        </tr>
+    </table>
 </div>
