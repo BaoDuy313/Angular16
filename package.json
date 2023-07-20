@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "xaydung": "ng build --base-href /angular16/ --deploy-url /angular16/ --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
