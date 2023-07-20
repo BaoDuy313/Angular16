@@ -1,5 +1,7 @@
 <div class="test">
-    <h1>Day la Component Home</h1>
-    <p>Them hang</p>
+    <h1>Đây là Component Home</h1>
+    <br/>
+    <h2>Chào bạn {{ name }}</h2>
+    <input type="text" [(ngModel)]="name"/>
+    <button (click)="resetName()" > Reset Tên</button>
 </div>
-
