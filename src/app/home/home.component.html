@@ -1,8 +1,8 @@
 <div class="test">
     <h1>Đây là Component Home</h1>
     <h1>Trái Cây</h1>
-    <br/>
-    <table class="table">
+    <br />
+    <!-- <table class="table">
         <tr>
             <th>STT</th>
             <th>Tên</th>
@@ -17,5 +17,18 @@
             </td>
             <td>{{ item.haGia | onSale | uppercase}}</td>
         </tr>
-    </table>
+    </table> -->
+    Tỉnh / Thành Phố:
+    <select id="city" (change)="changeCity($event)">
+        <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+            {{ data.city }}
+        </option>
+    </select>
+    <br />
+    Quận / Huyện:
+    <select id="district">
+        <option *ngFor="let district of districts" value="{{ district }}">
+            {{ district }}
+        </option>
+    </select>
 </div>

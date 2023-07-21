@@ -14,13 +14,33 @@ export class HomeComponent implements OnInit {
     { ten: 'Nho', gia: 3.34, haGia: true },
     { ten: 'Cam', gia: -2, haGia: false },
   ];
+  public districts: string[] = ['Quận / Huyện'];
+  public vietnamData = [
+    { city: 'Tỉnh / Thành Phố', district: [] },
+    { city: 'An Giang', district: ['TP A', 'TP B', 'TP C'] },
+    { city: 'Hồ Chí Minh', district: ['TP D', 'TP E', 'TP F'] },
+  ];
+
   constructor() { }
 
   public ngOnInit(): void {
-    console.log('trai cay = ', this.traicay);
+    console.log('vietnamData = ', this.vietnamData);
   }
   public resetName(): void {
     console.log('reset name');
     this.name = '';
   }
+
+  public changeCity(event: any) {
+    const city = event.target.value;
+    if(!city){
+      return;
+    }
+    const search = this.vietnamData.filter(data => data.city === city);
+    console.log('Search', search);
+    if (search && search.length > 0) {
+      this.districts = search[0].district;
+    }
+  }
+
 }
