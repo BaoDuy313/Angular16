@@ -2,22 +2,6 @@
     <h1>Đây là Component Home</h1>
     <h1>Trái Cây</h1>
     <br />
-    <!-- <table class="table">
-        <tr>
-            <th>STT</th>
-            <th>Tên</th>
-            <th>Giá</th>
-            <th>Đại Hạ Giá</th>
-        </tr>
-        <tr *ngFor="let item of traicay2; let i = index">
-            <td>{{i + 1}}</td>
-            <td>{{item.ten | uppercase}}</td>
-            <td class="right">
-                <span [ngClass]="{'so-am': item.gia < 0}" >{{item.gia | currency :"VND":"symbol":"1.2"}}</span>
-            </td>
-            <td>{{ item.haGia | onSale | uppercase}}</td>
-        </tr>
-    </table> -->
     Tỉnh / Thành Phố:
     <select id="city" (change)="changeCity($event)">
         <option *ngFor="let data of vietnamData" value="{{ data.city }}">
