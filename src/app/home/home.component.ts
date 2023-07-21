@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   public traicay = ['Táo', 'Nho', 'Cam', 'Quýt', 'Ổi'];
   public traicay2 = [
     { ten: 'Táo', gia: 12, haGia: true },
-    { ten: 'Nho', gia: 3, haGia: true },
+    { ten: 'Nho', gia: 3.34, haGia: true },
     { ten: 'Cam', gia: -2, haGia: false },
   ];
   constructor() { }

@@ -11,11 +11,11 @@
         </tr>
         <tr *ngFor="let item of traicay2; let i = index">
             <td>{{i + 1}}</td>
-            <td>{{item.ten}}</td>
+            <td>{{item.ten | uppercase}}</td>
             <td class="right">
-                <span [ngClass]="{'so-am': item.gia < 0}" >{{item.gia}}</span>
+                <span [ngClass]="{'so-am': item.gia < 0}" >{{item.gia | currency :"VND":"symbol":"1.2"}}</span>
             </td>
-            <td *ngIf="item.haGia">Đang hạ giá !!!</td>
+            <td>{{ item.haGia | onSale | uppercase}}</td>
         </tr>
     </table>
 </div>
