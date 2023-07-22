@@ -15,10 +15,19 @@ export class HttpServerService {
   };
 
   constructor(private httpClient: HttpClient) { }
+
   public getComments(): Observable<any>{
     const url =   `${this.REST_API_SERVER}/comments` ;
     return this.httpClient.get<any>(url,this.httpOptions);
   }
+
+  public postComments(payload:any): Observable<any>{
+    const url =   `${this.REST_API_SERVER}/comments` ;
+    console.log('postComment:payload = ',payload)
+    console.log('postComment:url = ',url)
+    return this.httpClient.post<any>(url,payload,this.httpOptions);
+  }
+
   public getRandomUsers(users:number = 1): Observable<any>{
     const url =   `${this.REST_API_SERVER_RANDOM_USERS}`+users ;
     return this.httpClient.get<any>(url,this.httpOptions);

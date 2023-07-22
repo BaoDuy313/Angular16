@@ -14,8 +14,8 @@ public ngOnInit(): void {
   this.httpServerService.getComments().subscribe(data=>{
     console.log('getComments:',data);
   })
-  this.httpServerService.getRandomUsers(5).subscribe(data=>{
-    console.log('getRandomUsers:',data.results);
-  })
+  // this.httpServerService.getRandomUsers(5).subscribe(data=>{
+  //   console.log('getRandomUsers:',data.results);
+  // })
 }
 }
